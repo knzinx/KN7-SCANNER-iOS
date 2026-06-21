@@ -13,7 +13,7 @@ const SPEECH = {
     done:     "KNSCANNER finished. Analyze the results carefully.",
   },
   es: {
-    start:    "Analizando, espera que KellerSS termine.",
+    start:    "Analizando, espera que KNSCANNER termine.",
     half:     "Escáner al cincuenta por ciento. Espera un poco más.",
     probe:    "Escáner al noventa por ciento. Ya casi termina.",
     done:     "KNSCANNER finalizado. Analiza los resultados con cuidado.",
@@ -1004,11 +1004,11 @@ function buildHTML(findings, netEntries, cheatAppFindings, knownCheatFindings, i
   let criticalCards = ""
 
   for (let p of proxyLoginFindings) {
-    let bundleList = p.bundles.map(b => `<span class="bundle" style="color:#ff4400">${b}</span>`).join(" ")
+    let bundleList = p.bundles.map(b => `<span class="bundle" style="color:#FF0000">${b}</span>`).join(" ")
     criticalCards += `
-    <div class="card critical" style="border-left-color:#ff4400;background:#140800;border-color:#3a1500;">
+    <div class="card critical" style="border-left-color:#FF0000;background:#0000FF;border-color:#FF0000;">
       <div class="card-header">
-        <span class="badge critical" style="background:#1a0800;color:#ff4400;border-color:#ff440055;">&#128274; PROXY BYPASS LOGIN — CRÍTICO</span>
+        <span class="badge critical" style="background:#0000FF;color:#0000FF;border-color:#FF0000;">&#0000FF; PROXY BYPASS LOGIN — CRÍTICO</span>
         <span class="conns">${p.hits} conexões</span>
       </div>
       <div class="card-domain">${p.domain}</div>
@@ -1793,7 +1793,7 @@ var TRANSLATIONS = {
   },
   en: {
     eyebrow: "iOS Scanner",
-    credits: "by Keller · Samir · Katiau",
+    credits: "by Knrlq · Knw · King",
     fileLabel: "File:",
     start: "Start",
     lastRecord: "Last record",
