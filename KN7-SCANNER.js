@@ -1,22 +1,22 @@
 const DEVICE_LANG = (Device.language() || "pt").toLowerCase().substring(0, 2)
 const SPEECH = {
   pt: {
-    start:    "Analisando, aguarde o KNSCANNER terminar",
+    start:    "Analisando, aguarde o SCANNER terminar",
     half:     "Scanner em cinquenta por cento. Aguarde mais um pouco.",
     probe:    "Scanner em noventa por cento. Aguarde mais um pouco.",
-    done:     "SCANNER DO KN finalizado. Analise os resultados com cuidado.",
+    done:     "SCANNER finalizado. Analise os resultados com cuidado.",
   },
   en: {
-    start:    "Analyzing, please wait for KNSCANNER to finish.",
+    start:    "Analyzing, please wait for SCANNER to finish.",
     half:     "Scanner at fifty percent. Please wait a little longer.",
     probe:    "Scanner at ninety percent. Almost done.",
-    done:     "KNSCANNER finished. Analyze the results carefully.",
+    done:     "SCANNER finished. Analyze the results carefully.",
   },
   es: {
-    start:    "Analizando, espera que KellerSS termine.",
+    start:    "Analizando, espera que SCANNER termine.",
     half:     "Escáner al cincuenta por ciento. Espera un poco más.",
     probe:    "Escáner al noventa por ciento. Ya casi termina.",
-    done:     "KNSCANNER finalizado. Analiza los resultados con cuidado.",
+    done:     "SCANNER finalizado. Analiza los resultados con cuidado.",
   },
 }
 const S = SPEECH[DEVICE_LANG] || SPEECH["pt"]
@@ -1004,11 +1004,11 @@ function buildHTML(findings, netEntries, cheatAppFindings, knownCheatFindings, i
   let criticalCards = ""
 
   for (let p of proxyLoginFindings) {
-    let bundleList = p.bundles.map(b => `<span class="bundle" style="color:#0000FF">${b}</span>`).join(" ")
+    let bundleList = p.bundles.map(b => `<span class="bundle" style="color:#ff4400">${b}</span>`).join(" ")
     criticalCards += `
-    <div class="card critical" style="border-left-color:#0000FF;background:#140800;border-color:#3a1500;">
+    <div class="card critical" style="border-left-color:#ff4400;background:#140800;border-color:#3a1500;">
       <div class="card-header">
-        <span class="badge critical" style="background:#FF0000;color:#FF0000;border-color:#0000FF;">&#0000FF; PROXY BYPASS LOGIN — CRÍTICO</span>
+        <span class="badge critical" style="background:#1a0800;color:#ff4400;border-color:#ff440055;">&#128274; PROXY BYPASS LOGIN — CRÍTICO</span>
         <span class="conns">${p.hits} conexões</span>
       </div>
       <div class="card-domain">${p.domain}</div>
@@ -2255,7 +2255,7 @@ async function showResult(html) {
   },
   en: {
     eyebrow: "iOS Scanner",
-    credits: "by Kn · Knw · King",
+    credits: "by Keller · Samir · Katiau",
     fileLabel: "File:",
     start: "Start",
     lastRecord: "Last record",
