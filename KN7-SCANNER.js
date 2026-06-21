@@ -2255,7 +2255,7 @@ async function showResult(html) {
   },
   en: {
     eyebrow: "iOS Scanner",
-    credits: "by Keller · Samir · Katiau",
+    credits: "by Kn · Knw · King",
     fileLabel: "File:",
     start: "Start",
     lastRecord: "Last record",
